@@ -15,7 +15,7 @@ class String
   end
 
   def count_sentences
-    temp = self.split("!", "?", ".")
+    temp = self.split(/[.?!]/)
     temp.each_with_index do |sentence, i|
       if sentence == " "
         temp.delete_at(i)
