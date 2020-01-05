@@ -21,5 +21,6 @@ class String
         temp.delete_at(i)
       end
     end
+    temp.length
   end
 end
