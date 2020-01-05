@@ -15,7 +15,11 @@ class String
   end
 
   def count_sentences
-    self.split("!", "?", ".")
-    binding.pry
+    temp = self.split("!", "?", ".")
+    temp.each_with_index do |sentence, i|
+      if sentence == " "
+        temp.delete_at(i)
+      end
+    end
   end
 end
